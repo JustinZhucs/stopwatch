@@ -36,10 +36,10 @@ const StopWatch = () => {
     }
     function FormatTime() {
 
-      let Hours =Math.floor(ElapsedTime / (1000 * 60 * 60));
-      let Minutes =Math.floor(ElapsedTime / (1000 * 60) % 60);
-      let Seconds =Math.floor(ElapsedTime / (1000 ) % 60);
-      let Miliseconds =Math.floor((ElapsedTime % 1000) / 10);
+      let Hours = Math.floor(ElapsedTime / (1000 * 60 * 60));
+      let Minutes = Math.floor(ElapsedTime / (1000 * 60) % 60);
+      let Seconds = Math.floor(ElapsedTime / (1000 ) % 60);
+      let Miliseconds = Math.floor((ElapsedTime % 1000) / 10);
 
       Hours = String(Hours).padStart(2, "0");
       Minutes = String(Minutes).padStart(2, "0");
@@ -51,13 +51,13 @@ const StopWatch = () => {
 
 
   return (
-    <div className='h-[250px] w-[300px] border-2 border-indigo-500 bg-teal-500/70 flex justify-center items-center rounded-3xl'>
-      <div className='space-y-4'>
-        <h1 className='text-center font-bold text-6xl text-slate-700'>{FormatTime()}</h1>
-        <div className='text-center space-x-2'>
-          <button onClick={Start} className='px-4 py-2 rounded-2xl text-white cursor-pointer font-semibold bg-green-500/70 text-xl scale-[1] hover:scale-[1.03] transition-all ease-out duration-300'>Start</button>
-          <button onClick={Pause}  className='px-4 py-2 rounded-2xl text-white cursor-pointer font-semibold bg-blue-500/70 text-xl scale-[1] hover:scale-[1.03] transition-all ease-out duration-300'>Pause</button>
-          <button onClick={Reset}  className='px-4 py-2 rounded-2xl text-white cursor-pointer font-semibold bg-red-500/70 text-xl scale-[1] hover:scale-[1.03] transition-all ease-out duration-300'>Reset</button>
+    <div className='h-[350px] w-[600px] border-4 border-sky-600 bg-zinc-900 flex justify-center items-center rounded-3xl hover:bg-zinc-800 transition-all duration-500 drop-shadow-xl'>
+      <div className='space-y-6'>
+        <h1 className='text-center font-bold text-8xl text-yellow-300'>{FormatTime()}</h1>
+        <div className='text-center space-x-6'>
+          <button onClick={Start} className='px-4 py-2 text-2xl rounded-2xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-green-500 via-black from-yellow-500 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Start</button>
+          <button onClick={Pause}  className='px-4 py-2 text-2xl rounded-2xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-sky-500 via-black from-yellow-600 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Pause</button>
+          <button onClick={Reset}  className='px-4 py-2 text-2xl rounded-2xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-red-500 via-black from-yellow-700 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Reset</button>
         </div>
       </div>
     </div>
