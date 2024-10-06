@@ -1,12 +1,15 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import StopWatch from './components/stopWatch';
 
-const App = () => {
+function App() {
   return (
-    <h1 className="text-2xl font-bold underline">
-      Hello
-    </h1>
+    <>
+    <div className="h-screen flex justify-center items-center bg-slate-800">
+      <StopWatch />
+    </div>
+    </>
   );
 }
 
-export default App;
+export default App
