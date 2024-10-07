@@ -5,19 +5,17 @@ const StopWatch = () => {
 
     const [IsRunning,setIsRunning] = useState(false);
     const [ElapsedTime,setElapsedTime] = useState(0);
-    const IntervalIdRef = useRef(null);
+    const IntervalIdRef = useRef(null); // use local variable instead of using useRef hook to avoid memory leak
     const StartTimeRef = useRef(0);
 
     useEffect(() => {
-
-      IntervalIdRef.current = setInterval(() => {
-        if (IsRunning) {
+        if (!IsRunning) { return } // if IsRunning put inside of the const intervalId, setInterval will be called every 10ms
+      const intervalId = setInterval(() => {
           setElapsedTime(Date.now() -  StartTimeRef.current)
-        }
       }, 10);
 
       return () => {
-          clearInterval(IntervalIdRef.current);
+          clearInterval(intervalId);
       }
       
     }, [IsRunning])
