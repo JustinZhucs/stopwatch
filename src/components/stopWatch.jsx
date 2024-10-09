@@ -55,7 +55,7 @@ const StopWatch = () => {
         <div className='text-center space-x-6'>
           <button onClick={Start} className='px-4 py-2 text-2xl rounded-2xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-green-500 via-black from-yellow-500 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Start</button>
           <button onClick={Pause}  className='px-4 py-2 text-2xl rounded-2xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-sky-500 via-black from-yellow-600 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Pause</button>
-          <button onClick={Reset}  className='px-4 py-2 text-2xl rounded-2xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-red-500 via-black from-yellow-700 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Reset</button>
+          <button onClick={Reset}  className='px-4 py-2 text-2xl rounded-3xl text-white cursor-pointer font-semibold transition-all duration-500 bg-gradient-to-br to-red-500 via-black from-yellow-700 bg-size-200 hover:bg-right-bottom scale-[1] hover:scale-[1.03]'>Reset</button>
         </div>
       </div>
     </div>
